@@ -1,0 +1,48 @@
+.card {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.2);
+  margin: 20px;
+  overflow: hidden;
+  background-color: #3f7d58;
+  font-family: sans-serif;
+}
+
+.item {
+  max-width: 100%;
+  height: auto;
+}
+
+.itemContent {
+  font-family: Arial, Helvetica;
+  text-align: center;
+}
+
+.itemName {
+  font-size: 1em;
+
+  color: #efefef;
+}
+
+.buttonContent {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.itemButton {
+  background-color: #ec5228;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid #ec5228;
+}
+
+.itemButton:hover {
+  background-color: #ec5228;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+  transform: translateY(-4px);
+  cursor: pointer;
+}
