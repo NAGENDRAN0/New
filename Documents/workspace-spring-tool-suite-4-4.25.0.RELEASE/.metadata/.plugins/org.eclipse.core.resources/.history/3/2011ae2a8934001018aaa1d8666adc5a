@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fundamental</title>
+
+    <link rel="icon" type="image/png" href="/image/Logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        a, u {
+            text-decoration: none;
+            color: black;
+            font-weight: lighter;
+        }
+
+        .icon-tile {
+            width: 100px;
+            height: 100px;
+            background-color: #D5F2F8;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .icon-tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .tile-label {
+            font-weight: 500;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        img.logo {
+            border-radius: 10px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f5fdf4; font-family: Arial, sans-serif;">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #3C949E;">
+    <div class="container d-flex align-items-center">
+        <img th:src="@{/image/Logo.png}" class="logo" />
+        <a class="navbar-brand ms-2" th:href="@{/}" style="font-weight: bold;">Fundamental HMS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" th:href="@{/}" style="color:white;">Home</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/features}" style="color:white;">About</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/contact}" style="color:white;">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/logout}" style="color:white;"><button>Logout</button></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Master Tiles -->
+<div class="container mt-5">
+    <div class="row text-center justify-content-center g-4">
+
+        <!-- Item Master -->
+        <div class="col-md-3 col-sm-6">
+            <a href="/master/data" class="text-decoration-none d-flex flex-column align-items-center">
+                <div class="icon-tile mb-2">
+                    <img th:src="@{/image/Item Master.png}" alt="Item Master" width="70" height="70">
+                </div>
+                <span class="tile-label">Item Master</span>
+            </a>
+        </div>
+
+        <!-- Staff Master -->
+        <div class="col-md-3 col-sm-6">
+            <a href="/master/staff" class="text-decoration-none d-flex flex-column align-items-center">
+                <div class="icon-tile mb-2">
+                    <img th:src="@{/image/staff.png}" alt="Staff Master" width="70" height="70">
+                </div>
+                <span class="tile-label">Staff Master</span>
+            </a>
+        </div>
+
+        <!-- Add more master links here -->
+        <!-- Example: Department Master -->
+        <!--
+        <div class="col-md-3 col-sm-6">
+            <a href="/department-master" class="text-decoration-none d-flex flex-column align-items-center">
+                <div class="icon-tile mb-2">
+                    <img th:src="@{/image/department.png}" alt="Department Master" width="70" height="70">
+                </div>
+                <span class="tile-label">Department Master</span>
+            </a>
+        </div>
+        -->
+
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

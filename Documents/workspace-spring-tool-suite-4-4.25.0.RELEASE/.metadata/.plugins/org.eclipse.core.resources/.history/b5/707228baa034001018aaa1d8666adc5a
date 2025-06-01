@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Fundamental</title>
+	<link rel="icon" type="/image/Logo/png" href="/image/Logo.png" style="border-radius: 8px;">
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5fdf4;
+			margin: 0;
+			padding: 0;
+		}
+
+		.grid {
+			grid-template-columns: 1fr 3fr 1fr 3fr;
+			/* more space for input cells */
+		}
+
+
+		.header {
+			padding: 10px;
+			text-align: center;
+		}
+
+		.header button {
+			background-color: #3C949E;
+			border: none;
+			padding: 10px 15px;
+			margin: 0 5px;
+			cursor: pointer;
+			font-weight: bold;
+			color: #fff;
+			border-radius: 4px;
+		}
+
+		.form-container {
+			padding: 20px;
+		}
+
+		fieldset {
+			border: 1px solid #3C949E;
+			margin-bottom: 20px;
+			border-radius: 6px;
+			padding: 10px;
+		}
+
+		legend {
+			font-weight: bold;
+			color: #3C949E;
+			padding: 0 10px;
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr 2fr;
+			gap: 12px 16px;
+			align-items: center;
+		}
+
+		label {
+			text-align: right;
+			padding-right: 6px;
+			white-space: nowrap;
+		}
+
+		input,
+		select,
+		textarea {
+			width: 100%;
+			padding: 6px;
+			border-radius: 4px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		textarea {
+			resize: vertical;
+			min-height: 60px;
+
+		}
+
+
+
+		@media (max-width: 900px) {
+			.grid {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			label {
+				text-align: left;
+			}
+
+
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Place this inside <body> near the top -->
+
+	<nav style="background-color: #3C949E; padding: 10px;">
+		<div style="display: flex; align-items: center; max-width: 1200px; margin: auto; color: white;">
+			<img src="/image/Logo.png" alt="Logo"
+				style="border-radius: 10px; width: 50px; height: 50px; margin-right: 10px;">
+			<a href="/"
+				style="color: white; font-weight: bold; text-decoration: none; font-size: 1.25rem; flex-grow: 1;">
+				Fundamental HMS
+			</a>
+			<a href="/" style="color: white; margin-right: 15px; text-decoration: none;">Home</a>
+			<a href="/features" style="color: white; margin-right: 15px; text-decoration: none;">About</a>
+			<a href="/contact" style="color: white; margin-right: 15px; text-decoration: none;">Profile</a>
+
+			<div class="d-flex justify-content-end mb-3">
+				<a href="/" class="btn btn-sm btn-custom"> <img src="/image/back.png" height="30" width="30" /> </a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="header">
+		<button>NEW</button>
+		<button>SAVE</button>
+		<button>ATTACHMENT</button>
+		<button>INCENTIVE</button>
+		<button>CLOSE</button>
+	</div>
+
+	<form class="form-container">
+		<fieldset>
+			<legend>PERSONAL INFO</legend>
+
+			<!-- Inside fieldset -->
+			<div class="grid">
+				<label>Staff ID</label>
+				<input type="text" name="staffId" readonly>
+
+				<label>Name</label>
+				<div style="display: flex; gap: 8px;">
+					<select name="prefix" style="flex: 0 0 60px;">
+						<option>Mr</option>
+						<option>Mrs</option>
+						<option>Ms</option>
+					</select>
+					<input type="text" name="name" style="flex: 1;">
+				</div>
+
+				<label>Sex</label>
+				<select name="sex">
+					<option>Male</option>
+					<option>Female</option>
+					<option>Transgender</option>
+					<option>Prefer Not To Say</option>
+				</select>
+
+				<label>Date of Birth</label>
+				<input type="date" name="dob">
+
+				<label>Blood Group</label>
+				<select name="bloodGroup">
+					<option>A+</option>
+					<option>O+</option>
+				</select>
+
+				<label>Email Personal</label>
+				<input type="email" name="email">
+
+				<label>Mobile</label>
+				<input type="tel" name="mobile">
+
+				<label>Phone</label>
+				<input type="tel" name="phone">
+
+				<label>Qualification</label>
+				<input type="text" name="qualification">
+
+				<label>Permanent Address</label>
+				<textarea name="permanentAddress"></textarea>
+
+				<label>Postal Code</label>
+				<input type="text" name="postalCode">
+			</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>OFFICIAL INFO</legend>
+			<div class="grid">
+				<label>Designation Code</label>
+				<input type="text">
+
+				<label>Designation Name</label>
+				<input type="text">
+
+				<label>Department Code</label>
+				<input type="text">
+
+				<label>Department Name</label>
+				<input type="text">
+
+				<label>Joining Date</label>
+				<input type="date">
+
+				<label>Confirmation Date</label>
+				<input type="date">
+
+				<label>Email Official</label>
+				<input type="email">
+
+				<label>Accomodation</label>
+				<input type="text">
+
+				<label>Service Type</label>
+				<select>
+					<option>Full-Time</option>
+					<option>Part-Time</option>
+					<option>Contract</optio>
+				</select>
+
+				<label>Staff Classification</label>
+				<select>
+					<option>General</option>
+					<option>Non General</option>
+				</select>
+
+				<label>Status</label>
+				<select>
+					<option>Active</option>
+					<option>InActive</option>
+
+				</select>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>OTHER INFO</legend>
+			<div class="grid">
+				<label>Aadhar Number</label>
+				<input type="text">
+
+				<label>Passport Number</label>
+				<input type="text">
+
+				<label>Religion</label>
+				<select>
+					<option>Hindu</option>
+					<option>Muslim</option>
+					<option>Cristian</option>
+					<option>Other</option>
+					<option>Prefer Not To say</option>
+				</select>
+
+			
+
+				<label>Married Status</label>
+				<select>
+					<option>Single</option>
+					<option>Married</option>
+					<option>Prefer Not To say</option>
+
+				</select>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>PAYROLL INFO</legend>
+			<div class="grid">
+				<label>Salary Pay Mode</label>
+				<select>
+					<option>Cash</option>
+					<option>Bank</option>
+				</select>
+
+				<label>Bank Name</label>
+				<select>
+					<option>Axis Bank</option>
+					<option>Other</option>
+
+				</select>
+
+				<label>Account Number</label>
+				<input type="text">
+
+				<label>PAN Number</label>
+				<input type="text">
+
+				<label>EPF Number</label>
+				<input type="text">
+
+				<label>ESI Number</label>
+				<input type="text">
+
+				<label>Welfare Number</label>
+				<input type="text">
+			</div>
+		</fieldset>
+		<fieldset>
+					<legend>PAYROLL INFO</legend>
+					<div class="grid">
+						<label>Salary Pay Mode</label>
+						<select>
+							<option>Cash</option>
+							<option>Bank</option>
+						</select>
+
+						<label>Bank Name</label>
+						<select>
+							<option>Axis Bank</option>
+							<option>Other</option>
+
+						</select>
+
+						<label>Account Number</label>
+						<input type="text">
+
+						<label>PAN Number</label>
+						<input type="text">
+
+						<label>EPF Number</label>
+						<input type="text">
+
+						<label>ESI Number</label>
+						<input type="text">
+
+						<label>Welfare Number</label>
+						<input type="text">
+					</div>
+				</fieldset>
+	</form>
+</body>
+
+</html>

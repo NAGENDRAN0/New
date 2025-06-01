@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Billing Page</title>
+	<link rel="stylesheet" href="/css/Billing.css" />
+  </head>
+  <body>
+    <div class="toolbar">
+      <button>NEW</button>
+      <button>SAVE</button>
+      <button>SUBMIT</button>
+      <button>BILL</button>
+      <button>PRINT</button>
+	  <a href="/">
+      <button>CLOSE</button></a>
+    </div>
+
+    <div class="billing-form">
+      <!-- Patient and Bill Info -->
+      <div class="form-row">
+        <label>Bill Number</label
+        ><input type="text" id="billNumber" value="TRBD1153" />
+        <label>Date</label><input type="datetime-local" id="billDate" />
+      </div>
+
+      <div class="form-row">
+        <label>Patient ID</label><input type="text" id="patientId" />
+        <label>Patient Name</label><input type="text" id="patientName" />
+      </div>
+
+      <div class="form-row">
+        <label>Doctor Name</label><input type="text" id="doctorName" />
+        <label>Sex</label>
+        <select id="sex">
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <label>Age</label><input type="number" id="age" style="width: 60px" />
+      </div>
+
+      <div class="form-row">
+        <label>Type</label>
+        <select id="type">
+          <option>General</option>
+          <option>Emergency</option>
+        </select>
+        <label>Payment Mode</label>
+        <select id="paymentMode">
+          <option>Cash</option>
+          <option>Credit</option>
+          <option>Card</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label>Bill Amount</label
+        ><input type="number" id="billAmount" readonly /> <label>Received</label
+        ><input type="number" id="receivedAmount" /> <label>Balance</label
+        ><input type="number" id="balanceAmount" readonly />
+      </div>
+
+      <hr />
+
+      <!-- Add Billing Items -->
+     <!-- Modern Billing Item Entry -->
+<!-- Horizontal Billing Item Entry -->
+<!-- Horizontal Billing Item Entry -->
+<h4 class="section-header">Billing Items</h4>
+<div class="item-entry-horizontal">
+  <input type="text" placeholder="Code" id="itemcode">
+  <input type="text" placeholder="Name" id="itemname" list="itemlist">
+  <input type="number" placeholder="Amount" id="itemAmount">
+  <input type="number" placeholder="Disc.%" id="itemDisc">
+  <input type="number" placeholder="P.Disc.%" id="itemPDisc">
+  <input type="text" placeholder="Remarks" id="itemRemarks">
+  <button onclick="addItem()">ADD</button>
+</div>
+
+<!-- Billing Items Table -->
+<table class="item-table modern">
+  <thead>
+    <tr>
+      <th>Del</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Disc.%</th>
+      <th>Disc.</th>
+      <th>P.Disc.%</th>
+      <th>P.Disc.</th>
+      <th>Total Disc.</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+
+<!--    <script>
+      function addItem() {
+        const code = document.getElementById("itemCode").value;
+        const name = document.getElementById("itemName").value;
+        const amount =
+          parseFloat(document.getElementById("itemAmount").value) || 0;
+        const disc = parseFloat(document.getElementById("itemDisc").value) || 0;
+        const pdisc =
+          parseFloat(document.getElementById("itemPDisc").value) || 0;
+        const remarks = document.getElementById("itemRemarks").value;
+
+        const discAmt = (amount * disc) / 100;
+        const pdiscAmt = (amount * pdisc) / 100;
+        const totalDisc = discAmt + pdiscAmt;
+
+        const table = document.querySelector(".item-table tbody");
+        const row = table.insertRow();
+        row.innerHTML = `
+      <td><button onclick="removeRow(this)">Del</button></td>
+      <td>${code}</td>
+      <td>${name}</td>
+      <td>${amount.toFixed(2)}</td>
+      <td>${disc}</td>
+      <td>${discAmt.toFixed(2)}</td>
+      <td>${pdisc}</td>
+      <td>${pdiscAmt.toFixed(2)}</td>
+      <td>${totalDisc.toFixed(2)}</td>
+      <td></td>
+      <td></td>
+      <td>${remarks}</td>
+    `;
+
+        updateBillAmount();
+        clearItemFields();
+      }
+
+      function removeRow(btn) {
+        btn.closest("tr").remove();
+        updateBillAmount();
+      }
+
+      function updateBillAmount() {
+        const rows = document.querySelectorAll(".item-table tbody tr");
+        let total = 0;
+        rows.forEach((row) => {
+          const amount = parseFloat(row.cells[3].innerText) || 0;
+          total += amount;
+        });
+        document.getElementById("billAmount").value = total.toFixed(2);
+
+        const received =
+          parseFloat(document.getElementById("receivedAmount").value) || 0;
+        document.getElementById("balanceAmount").value = (
+          total - received
+        ).toFixed(2);
+      }
+
+      document
+        .getElementById("receivedAmount")
+        .addEventListener("input", updateBillAmount);
+
+      function clearItemFields() {
+        [
+          "itemCode",
+          "itemName",
+          "itemAmount",
+          "itemDisc",
+          "itemPDisc",
+          "itemRemarks",
+        ].forEach((id) => {
+          document.getElementById(id).value = "";
+        });
+      }
+
+      // Set default date
+      document.getElementById("billDate").value = new Date()
+        .toISOString()
+        .slice(0, 16);
+    </script> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script>
+	  $(document).ready(function () {
+	    $("#itemSearch").on("input", function () {
+	      let query = $(this).val();
+
+	      if (query.length >= 2) {
+	        $.ajax({
+	          url: "/master/search",
+	          data: { query: query },
+	          success: function (items) {
+	            let datalist = $("#itemList");
+	            datalist.empty();
+	            items.forEach(item => {
+	              datalist.append(`<option data-code="${item.itemcode}" 
+	                                      data-fee="${item.fee}" 
+	                                      data-remarks="${item.remarks}" 
+	                                      value="${item.itemname}"></option>`);
+	            });
+	          }
+	        });
+	      }
+	    });
+
+	    // Autofill when an item is selected
+	    $("#itemname").on("change", function () {
+	      let val = this.value;
+	      let option = $("#itemList option").filter(function () {
+	        return this.value === val;
+	      });
+
+	      if (option.length > 0) {
+	        $("#itemCode").val(option.data("code"));
+	        $("#itemFee").val(option.data("fee"));
+	        $("#itemRemarks").val(option.data("remarks"));
+	      }
+	    });
+	  });
+	</script>
+
+	<datalist id="itemList"></datalist>
+
+  </body>
+</html>

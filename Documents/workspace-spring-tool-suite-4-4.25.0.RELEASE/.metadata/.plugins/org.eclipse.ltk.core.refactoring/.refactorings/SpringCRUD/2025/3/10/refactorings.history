@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;static&apos; to &apos;HMS/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;SpringCRUD&apos;&#x0D;&#x0A;- Destination element: &apos;HMS/src/main/resources&apos;&#x0D;&#x0A;- Original element: &apos;static&apos;" description="Copy folder" destination="=HMS/src\/main\/resources=/maven.pomderived=/true=/=/optional=/true=/" element1="src/main/resources/static" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1741021766609" units="0" version="1.0"/>
+</session>

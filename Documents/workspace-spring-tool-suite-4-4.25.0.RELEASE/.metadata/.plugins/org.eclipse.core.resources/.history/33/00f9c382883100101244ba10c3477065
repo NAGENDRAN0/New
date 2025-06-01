@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fundamental</title>
+		<link rel="icon" type="/image/Logo/png" href="/image/Logo.png" style="border-radius: 8px;">
+    <link rel="stylesheet" href="/css/BillingList.css" />
+</head>
+<body>
+    <div class="toolbar">
+        <button><a href="/billing/new">NEW BILL</a></button>
+        <button><a href="/">BACK TO HOME</a></button>
+    </div>
+
+    <h1>Billed Records</h1>
+
+    <!-- Billed List Table -->
+    <table class="billed-list-table">
+        <thead>
+            <tr>
+                <th>Bill Number</th>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Total Amount</th>
+                <th>Payment Mode</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample Row -->
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="/billing/TRBD1153">View</a>
+                    <a href="/billing/TRBD1153/edit">Edit</a>
+                </td>
+            </tr>
+            <!-- More Rows Can Be Added Dynamically -->
+        </tbody>
+    </table>
+
+   <!-- <script>
+        // Fetch billed records dynamically (this is just an example)
+        fetch('/api/bills')  // Assuming an API endpoint to fetch bill records
+            .then(response => response.json())
+            .then(bills => {
+                const tbody = document.querySelector(".billed-list-table tbody");
+                bills.forEach(bill => {
+                    const row = document.createElement("tr");
+
+                    row.innerHTML = `
+                        <td>${bill.billNumber}</td>
+                        <td>${bill.patientName}</td>
+                        <td>${bill.doctor}</td>
+                        <td>${bill.totalAmount}</td>
+                        <td>${bill.paymentMode}</td>
+                        <td>${bill.status}</td>
+                        <td>
+                            <a href="/billing/${bill.billNumber}">View</a>
+                            <a href="/billing/${bill.billNumber}/edit">Edit</a>
+                        </td>
+                    `;
+
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching billed records:', error));
+    </script> -->
+
+</body>
+</html>

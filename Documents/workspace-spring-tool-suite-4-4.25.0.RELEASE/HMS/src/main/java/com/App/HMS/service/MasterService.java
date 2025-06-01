@@ -1,0 +1,13 @@
+package com.App.HMS.service;
+
+import java.util.List;
+
+import com.App.HMS.model.MasterModel;
+
+public interface MasterService {
+	
+	MasterModel save(MasterModel master); 
+	List<MasterModel> getallItem();
+	List<MasterModel> searchByName(String query);
+
+}

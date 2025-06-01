@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\jdk1.7.0" version="1.7.0_67">
+        <bootpath>
+            <entry path="C:\jdk1.7.0\jre\lib\resources.jar"/>
+            <entry path="C:\jdk1.7.0\jre\lib\rt.jar"/>
+            <entry path="C:\jdk1.7.0\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\jdk1.7.0\jre\lib\jsse.jar"/>
+            <entry path="C:\jdk1.7.0\jre\lib\jce.jar"/>
+            <entry path="C:\jdk1.7.0\jre\lib\charsets.jar"/>
+            <entry path="C:\jdk1.7.0\jre\lib\jfr.jar"/>
+            <entry path="C:\jdk1.7.0\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\jdk1.7.0\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\jdk1.7.0\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Users\Nagendran\OneDrive\Documents\jdk-17.0.12_windows-x64_bin\jdk-17.0.12\bin" version="17.0.12">
+        <bootpath>
+            <entry path="null"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="null"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="null"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Users\Nagendran\OneDrive\Documents\jdk-17.0.12_windows-x64_bin\jdk-17.0.12" version="17.0.12"/>
+    <libraryInfo home="C:\Program Files\Java\jdk-20" version="20"/>
+    <libraryInfo home="C:\Users\Nagendran\OneDrive\Documents\jdk-21.0.5_windows-x64_bin\jdk-21.0.5" version="21.0.5"/>
+    <libraryInfo home="C:\STS\sts-4.25.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.4.v20240802-1551" version="21.0.4">
+        <bootpath>
+            <entry path="null"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="null"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="null"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\STS\sts-4.25.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.4.v20240802-1551\jre" version="21.0.4"/>
+    <libraryInfo home="C:\Program Files\jdk-21.0.5_windows-x64_bin\jdk-21.0.5" version="21.0.5"/>
+</libraryInfos>

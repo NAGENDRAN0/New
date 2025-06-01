@@ -1,0 +1,22 @@
+body {
+  background-color: #f5fdf4;
+}
+
+.text-primary-custom {
+  color: #3C949E;
+}
+
+.btn-custom {
+  background-color: #3C949E;
+  color: white;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #337f87;
+}
+
+.table-custom {
+  background-color: #3C949E;
+  color: white;
+}

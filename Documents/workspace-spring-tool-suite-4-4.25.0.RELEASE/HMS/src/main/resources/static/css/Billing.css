@@ -1,0 +1,265 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5fdf4;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #3c949e;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.toolbar button {
+  padding: 8px 20px;
+  background-color: #f5fdf4;
+  border: 1px solid #a1cfff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.billing-form {
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.form-row label {
+  min-width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-row input[type="text"],
+.form-row input[type="number"],
+.form-row input[type="datetime-local"],
+.form-row select {
+  padding: 5px;
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-row button {
+  background-color: #00bfff;
+  color: white;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.side-options {
+  float: right;
+  width: 300px;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+
+.side-options fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.side-options label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.side-options input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.side-options table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.side-options table th,
+.side-options table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.item-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.item-table th,
+.item-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.billing-items {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+
+.item-entry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.item-field {
+  display: flex;
+  flex-direction: column;
+  width: calc(33% - 16px);
+}
+
+.item-field.full-width {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.item-field label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.add-button {
+  padding: 8px 16px;
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #005fa3;
+}
+
+.item-table.modern {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.item-table.modern th,
+.item-table.modern td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.item-table.modern th {
+  background-color: #f3f3f3;
+}
+
+.item-entry-horizontal {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.item-entry-horizontal input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 130px;
+}
+
+.item-entry-horizontal button {
+  padding: 7px 16px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.item-entry-horizontal button:hover {
+  background-color: #005fa3;
+}
+.section-header {
+  color: #3c949e;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.item-entry-horizontal {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+ 
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.item-entry-horizontal input {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 120px;
+  background-color: white;
+}
+
+.item-entry-horizontal button {
+  padding: 7px 16px;
+  background-color: #3c949e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.item-entry-horizontal button:hover {
+  background-color: #327f89;
+}
+
+.item-table.modern {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.item-table.modern th {
+  background-color: #3c949e;
+  color: white;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.item-table.modern td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #f5fdf4;
+}
